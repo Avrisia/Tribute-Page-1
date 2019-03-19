@@ -1,24 +1,68 @@
+/*
+================
+Global styles
+================
+*/
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
+footer {
+  font-style: italic;
+}
+
+/*
+================
+ID styles
+================
+*/
+
 #main {
-  margin:30px auto;
-  padding:15px;
-  border:0px solid;
-  border-radius:5px;
+  margin: 30px auto;
+  padding: 15px;
+  border: 0px solid;
+  /* Восьмая строчка 1) неправильно оформлена, у тебя и так нет бордера,
+  а ты дал еще этому бордеру значения которые не могут отобразиться
+  2) border-radius работает без указания border */
+  border-radius: 5px;
   background: #f5f5f5;
   text-align: center;
+  /* В #main лучше не центровать,
+  усложняешь себе дальнейшую работу */
+  /* Центруй точечно, например так,:
+
+  h1,
+  p,
+  figure {
+    text-align: center;
+  } */
   line-height: 25px;
+  /* Указываются целые или десятичные числа
+  например: line-heigt: 1.6; */
 }
 #tribute-info {
   max-width: 600px;
+  /* Здесь корректнее указать width: 600px; */
   margin: auto;
   text-align: left;
+  /* Если будешь центровать точечно,
+  то text-align тут не надо будет указывать,
+  экономишь себе время и ускоряешь работу */
 }
+
+/* ul li {
+  margin: 7px 0;
+  line-height: 1.6;
+  Пример как можно визуально отделить li друг от друга
+  и улучшить читаемость
+} */
+
 #img-div {
   background: white;
   width: 100%;
+  /* Здесь width не надо указывать,
+  картинка съезжает вправо при мобильном разрешении */
   margin: auto;
   margin-top: 15px;
   border: 15px solid white;
@@ -29,10 +73,7 @@ body {
   height: auto;
   margin: auto;
   padding-bottom: 20px;
-  }
+}
 #img-caption {
   margin: 20px;
-}
-footer {
-  font-style: italic;
 }
